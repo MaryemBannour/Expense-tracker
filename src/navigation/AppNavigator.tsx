@@ -1,7 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useAuth } from '../context/AuthContext';
-import LoginScreen from '../screens/Auth/Login';
+import { Login } from '../screens/Auth/Login';
 import { View, ActivityIndicator, Text } from 'react-native';
 import { COLORS } from '../constants/theme';
 
@@ -36,7 +36,7 @@ export const AppNavigator = () => {
       {user ? (
         <Stack.Screen name="Home" component={HomeScreen} />
       ) : (
-        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Login" component={Login} />
       )}
     </Stack.Navigator>
   );
