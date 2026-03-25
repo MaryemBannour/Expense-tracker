@@ -1,7 +1,7 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
-import { getStorage } from 'firebase/storage';
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDr-TO6eLf94yPrvApaSuCvUVlkvDrcZCs",
@@ -10,13 +10,10 @@ const firebaseConfig = {
   storageBucket: "expense-tracker-app-1ecc6.firebasestorage.app",
   messagingSenderId: "886520872335",
   appId: "1:886520872335:web:301fc326f0ff6de4805ffa",
-  measurementId: "G-0837Z2EEMN",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Export services
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
